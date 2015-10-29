@@ -1,0 +1,9 @@
+*~*
+*.sdf
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.tlog
+*.opensdf
+*.lastbuildstate
+*.idb
