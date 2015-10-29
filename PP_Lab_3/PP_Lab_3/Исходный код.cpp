@@ -14,7 +14,7 @@ Node *root;
 int maxElement = -9999;
 
 void insertTree(Node **aNode, int data){
-	if (!(*aNode)){		// додаємо новий елемент
+	if (!(*aNode)){		// add new element
 		(*aNode) = new Node;
 		(*aNode)->value = data;
 		(*aNode)->left = NULL;
@@ -27,7 +27,7 @@ void insertTree(Node **aNode, int data){
 	return;
 }
 
-void printTree(Node *aNode){
+void printTree(Node *aNode){ // display tree
 	if (aNode){
 		printTree(aNode->left);
 		cout<<aNode->value<<"  ";
@@ -52,10 +52,10 @@ void main(){
 	for(int i = 0;i < 10;i++){
 		insertTree(&root,rand() % 50 - 25);
 	}
-	cout << "Елементи дерева: " << endl;
+	cout << Elements of tree: " << endl;
 	printTree(root);
 	findMaxElement(root);
-	cout << endl << endl << "Найбiльший елемент дерева = " << maxElement << endl;
+	cout << endl << endl << "Maximal element of tree = " << maxElement << endl;
 	cout << endl;
 	system("pause");
 }
